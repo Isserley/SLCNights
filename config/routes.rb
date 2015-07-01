@@ -1,19 +1,12 @@
 Rails.application.routes.draw do
-  get 'static_pages/index'
 
-  get 'static_pages/new'
+  root 'static_pages#home'
 
-  get 'static_pages/edit'
+  get 'static_pages/contact'
 
-  get 'static_pages/show'
+  get 'static_pages/about'
 
-  get 'clubs/index'
-
-  get 'clubs/new'
-
-  get 'clubs/edit'
-
-  get 'clubs/show'
+  resources :clubs
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
